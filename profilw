@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil interaktif seorang JUAL BELI AKUN, SELLER, dan GAMING STORE.">
+  <title>JARWO STORE</title>
+  <link rel="icon" type="image/png" href="https://via.placeholder.com/32">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Variables for futuristic theming */
+    :root {
+      --primary-color: #00ffea; /* Neon cyan */
+      --secondary-color: #0a0a23; /* Dark cyberpunk background */
+      --text-color: #e0e0ff; /* Light neon text */
+      --white: #1a1a3d; /* Darker shade for containers */
+      --accent-color: #ff00ff; /* Neon magenta accent */
+      --glow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea;
+      --glass-bg: rgba(10, 10, 35, 0.7); /* Semi-transparent dark glass */
+      --instagram-bg: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+      --facebook-bg: linear-gradient(45deg, #1877F2, #00ffea);
+      --twitter-bg: linear-gradient(45deg, #1DA1F2, #ff00ff);
+      --whatsapp-bg: linear-gradient(45deg, #25D366, #00ffea);
+      --shadow: 0 0 15px rgba(0, 255, 234, 0.3);
+    }
+
+    [data-theme="light"] {
+      --secondary-color: #e0e0ff; /* Light cyberpunk background */
+      --text-color: #0a0a23; /* Dark text for light mode */
+      --white: #f0f0ff; /* Light container */
+      --glass-bg: rgba(255, 255, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--secondary-color);
+      color: var(--text-color);
+      font-family: 'Orbitron', sans-serif; /* Futuristic font */
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Holographic particle background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 255, 234, 0.2) 1px, transparent 1px);
+      background-size: 15px 15px;
+      opacity: 0.4;
+      z-index: -1;
+      animation: hologram 30s linear infinite;
+    }
+
+    @keyframes hologram {
+      0% { background-position: 0 0; }
+      100% { background-position: 200px 200px; }
+    }
+
+    header {
+      background: linear-gradient(90deg, #00ffea, #ff00ff, #00ffea);
+      background-size: 300%;
+      color: var(--text-color);
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      animation: neonGlow 10s ease infinite;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    @keyframes neonGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header img {
+      border: 3px solid var(--primary-color);
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      filter: drop-shadow(var(--glow));
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.15) rotate(5deg);
+      filter: drop-shadow(0 0 20px var(--accent-color));
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: glitch 2s linear infinite;
+    }
+
+    header p {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.2rem;
+      font-weight: 300;
+      opacity: 0.8;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes glitch {
+      2%, 64% { transform: translate(2px, 0) skew(0deg); }
+      4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+      62% { transform: translate(0, 0) skew(5deg); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 2rem;
+    }
+
+    .container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--primary-color);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent-color);
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      background: var(--primary-color);
+      border: 1px solid var(--accent-color);
+      border-radius: 10px;
+      color: var(--text-color);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 5px var(--primary-color));
+    }
+
+    .social-links a.instagram { background: var(--instagram-bg); }
+    .social-links a.facebook { background: var(--facebook-bg); }
+    .social-links a.twitter { background: var(--twitter-bg); }
+    .social-links a.whatsapp { background: var(--whatsapp-bg); }
+
+    .social-links a:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(var(--glow));
+    }
+
+    /* Neon pulse effect on hover */
+    .social-links a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    .social-links a:active::before {
+      width: 250px;
+      height: 250px;
+    }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+      cursor: pointer;
+      padding: 0.6rem;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      transition: all 0.3s ease;
+      filter: drop-shadow(var(--glow));
+    }
+
+    .theme-toggle:hover {
+      transform: rotate(360deg);
+      background: var(--primary-color);
+      color: var(--secondary-color);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header img {
+        height: 100px;
+        width: 100px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 1.5rem;
+      }
+
+      .social-links a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">⚡️</button>
+  <header>
+    <img src="https://via.placeholder.com/120" alt="Foto Profil Nama Kamu">
+    <h1>ᴊᴀʀᴡᴏ ꜱᴛᴏʀᴇ</h1>
+    <p>Jubel akun | Seller | Gaming Store</p>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>Gaming Store</h2>
+        <p>
+          Jual beli akun game terpercaya dan aman, dijamin laku. Silakan terhubung dengan saya
+          lewat tautan di bawah ini.
+        </p>
+      </section>
+
+      <section>
+        <h2>Media Sosial</h2>
+        <div class="social-links">
+          <a href="https://www.instagram.com/404.astaari?" target="_blank" rel="noopener" class="instagram" aria-label="Kunjungi profil Instagram">Instagram</a>
+          <a href="https://facebook.com/yourusername" target="_blank" rel="noopener" class="facebook" aria-label="Kunjungi profil Facebook">Facebook</a>
+          <a href="https://wa.me/6288215586551" target="_blank" rel="noopener" class="WA ADMIN" aria-label="Kunjungi profil WA ADMIN">WA Admin</a>
+          <a href="https://chat.whatsapp.com/FlJBWQit1FV42H8P9fhaFj" target="_blank" rel="noopener" class="whatsapp" aria-label="Kunjungi profil Whatsapp">GB Whatsapp</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    }
+  </script>
+</body>
+</html>
